@@ -4,28 +4,28 @@ namespace GB_CSharp
 {
     enum DaysOfTheWeek
     {
-        Monday = 0b1000000,
-        Tuesday = 0b0100000,
-        Wednesday = 0b0010000,
+        Monday = 0b0000001,
+        Tuesday = 0b0000010,
+        Wednesday = 0b0000100,
         Thursday = 0b0001000,
-        Friday = 0b0000100,
-        Saturday = 0b0000010,
-        Sunday = 0b0000001
+        Friday = 0b0010000,
+        Saturday = 0b0100000,
+        Sunday = 0b1000000
     }
     class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Задание №1");
-            Console.Write("Введите минимальную температуру за сутки:");
+            Console.Write("Введите минимальную температуру за сутки: ");
             double tempMin = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Введите максимальную температуру за сутки:");
+            Console.Write("Введите максимальную температуру за сутки: ");
             double tempMax = Convert.ToDouble(Console.ReadLine());
             double tempAverage = (tempMax + tempMin) / 2;
             Console.WriteLine($"Средняя температура за сутки составляет: {tempAverage}\n");
 
             Console.WriteLine("Задание №2");
-            Console.WriteLine("Введите порядковый номер текущего месяца:");
+            Console.Write("Введите порядковый номер текущего месяца: ");
             int numMonth = Convert.ToInt32(Console.ReadLine());
             string result;
             switch (numMonth)
@@ -73,7 +73,7 @@ namespace GB_CSharp
             Console.WriteLine(result + "\n");
 
             Console.WriteLine("Задание №3");
-            Console.Write("Введите число:");
+            Console.Write("Введите число: ");
             int number = Convert.ToInt32(Console.ReadLine());
             if (number % 2 == 0)
             {
@@ -110,7 +110,7 @@ namespace GB_CSharp
             }
 
             Console.WriteLine("Задание №6");
-            int officeNum1 = 0b0111100;
+            int officeNum1 = 0b0011110;
             int officeNum2 = 0b1111111;
             Console.Write("Рабочие дни офиса №1:");
             //foreach (var value in Enum.GetValues(typeof(DaysOfTheWeek)))
