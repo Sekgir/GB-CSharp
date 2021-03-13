@@ -6,8 +6,9 @@ namespace Level_1.Lesson_7
 {
     class Cross
     {
-        static int SIZE_X = 3;
-        static int SIZE_Y = 3;
+        static int SIZE_X = 5;
+        static int SIZE_Y = 5;
+        static int LengthWin = 4;
 
         static char[,] field = new char[SIZE_Y, SIZE_X];
 
@@ -101,41 +102,72 @@ namespace Level_1.Lesson_7
 
         private static bool CheckWin(char sym)
         {
-            if (field[0, 0] == sym && field[0, 1] == sym && field[0, 2] == sym)
+            for (int mode = 0; mode < 4; mode++)
             {
-                return true;
-            }
-            if (field[1, 0] == sym && field[1, 1] == sym && field[1, 2] == sym)
-            {
-                return true;
-            }
-            if (field[2, 0] == sym && field[2, 1] == sym && field[2, 2] == sym)
-            {
-                return true;
-            }
+                int lengthX = 1;
+                int lengthY = 1;
+                bool reversY = false;
+                switch (mode)
+                {
+                    // Проверка по горизонтали
+                    case 0:
+                        lengthX = LengthWin;
+                        break;
 
-            if (field[0, 0] == sym && field[1, 0] == sym && field[2, 0] == sym)
-            {
-                return true;
-            }
-            if (field[0, 1] == sym && field[1, 1] == sym && field[2, 1] == sym)
-            {
-                return true;
-            }
-            if (field[0, 2] == sym && field[1, 2] == sym && field[2, 2] == sym)
-            {
-                return true;
-            }
+                    //Проверка по вертикали
+                    case 1:
+                        lengthY = LengthWin;
+                        break;
 
-            if (field[0, 0] == sym && field[1, 1] == sym && field[2, 2] == sym)
-            {
-                return true;
-            }
-            if (field[2, 0] == sym && field[1, 1] == sym && field[0, 2] == sym)
-            {
-                return true;
-            }
+                    //Проверка по диагонали с левого верхнего края
+                    case 2:
+                        lengthX = LengthWin;
+                        lengthY = LengthWin;
+                        break;
 
+                    //Проверка по диагонали с левого нижнего края
+                    case 3:
+                        lengthX = LengthWin;
+                        lengthY = LengthWin;
+                        reversY = true;
+                        break;
+                }
+                for (int y = reversY ? field.GetLength(0) - 1 : 0; !reversY && (y <= field.GetLength(0) - lengthY) || reversY && (y + 1 >= lengthY); y += reversY ? -1 : 1)
+                {
+                    for (int x = 0; x <= field.GetLength(1) - lengthX; x++)
+                    {
+                        bool IsWin = true;
+                        for (int j = 0; j < LengthWin; j++)
+                        {
+                            char CheckedSym = EMPTY_DOT;
+                            switch (mode)
+                            {
+                                case 0:
+                                    CheckedSym = field[y, x + j];
+                                    break;
+                                case 1:
+                                    CheckedSym = field[y + j, x];
+                                    break;
+                                case 2:
+                                    CheckedSym = field[y + j, x + j];
+                                    break;
+                                case 3:
+                                    CheckedSym = field[y - j, x + j];
+                                    break;
+                            }
+                            if (CheckedSym != sym)
+                            {
+                                IsWin = false;
+                                break;
+                            }
+                        }
+                        if (IsWin)
+                        {
+                            return true;
+                        }
+                    }
+                }
+            }
             return false;
         }
 
