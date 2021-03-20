@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson8_Task2", "Lesson8_Ta
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson8", "Lesson8", "{05D0A75E-1DCB-4B91-BF69-AD2F9F687A7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestLibrary", "TestLibrary\TestLibrary.csproj", "{A62FC6C0-62BC-4F71-A72D-2813C1F7ECCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{40533380-610F-477B-AE65-C97773B18890}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40533380-610F-477B-AE65-C97773B18890}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40533380-610F-477B-AE65-C97773B18890}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A62FC6C0-62BC-4F71-A72D-2813C1F7ECCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A62FC6C0-62BC-4F71-A72D-2813C1F7ECCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A62FC6C0-62BC-4F71-A72D-2813C1F7ECCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A62FC6C0-62BC-4F71-A72D-2813C1F7ECCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +36,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{BD8F56AB-0166-412D-A676-7FB16AE72BF1} = {05D0A75E-1DCB-4B91-BF69-AD2F9F687A7B}
 		{40533380-610F-477B-AE65-C97773B18890} = {05D0A75E-1DCB-4B91-BF69-AD2F9F687A7B}
+		{A62FC6C0-62BC-4F71-A72D-2813C1F7ECCE} = {05D0A75E-1DCB-4B91-BF69-AD2F9F687A7B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DEEB57D8-7279-4254-BC43-560B74DF159F}

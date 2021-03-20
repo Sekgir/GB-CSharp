@@ -2,7 +2,7 @@
 
 namespace TestLibrary
 {
-    public class TestLibrary
+    public class TestClass
     {
         public static void ConsoleWriteHello()
         {

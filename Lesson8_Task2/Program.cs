@@ -1,4 +1,5 @@
 ﻿using System;
+using TestLibrary;
 
 namespace Lesson8_Task2
 {
@@ -6,6 +7,7 @@ namespace Lesson8_Task2
     {
         static void Main(string[] args)
         {
+            TestClass.ConsoleWriteHello();
         }
     }
 }
