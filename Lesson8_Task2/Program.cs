@@ -1,12 +1,11 @@
 ﻿using System;
 
-namespace GB_CSharp
+namespace Lesson8_Task2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.ReadKey();
         }
     }
 }
